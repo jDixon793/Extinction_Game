@@ -1,0 +1,76 @@
+Creating State Machine Using Interfaces
+This is useful to break the program down into sections
+
+//The Interface
+public interface IGameState
+{
+
+	void UpdateState(); //this acts as the update loop
+	void ToOtherNeededStates();
+	void Finish();
+}
+
+//A State implementing IGameState
+
+public class StartState: IGameState
+{
+	private readonly GameStateMachine gameStateMachine;
+	//UI Elements probably held in list
+	//container for the instances of the ui so we can destroy them
+	
+	public StartState (GameStateMachine gSM)
+	{
+		gameStateMachine = gSM;
+	}
+	//this acts as the update loop when this state is active
+	void UpdateState();
+	{
+		//Show the required UI prefabs so the player can click through
+		//UI buttons will call Finish() when last button is pressed
+	}
+	
+	void ToOtherNeededStates()
+	{
+		gameStateMachine.currentState = gameStateMachine.neededState;
+	}
+	
+	
+	
+	void Finish()
+	{
+		//destroy all instances of the UI
+	}
+}
+
+
+//The StateMachine controller
+
+public class GameStateMachine: MonoBehavior
+{
+	//references for all of the states
+	public IGameState currentState; // can be any state that implements IGameState
+	public StartState startState;
+	
+	//other game vars
+	
+	void Awake()
+	{
+		startState = new StartState(this);
+	}
+	void Start()
+	{
+		currentState = startState();
+	}
+	
+	//this is what makes the magic
+	//we let the stats control when to change state
+	//and which state should be next
+	
+	void Update()
+	{
+		currentState.UpdateState();
+	}
+	
+	//other funtions needed by all states
+}
+

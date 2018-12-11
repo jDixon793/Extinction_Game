@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Extinction.CSharp", "UnityVS.Extinction.CSharp.csproj", "{00FCB4C3-8B92-E17A-36F1-0EFBECA534D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.Extinction.CSharp.Editor", "UnityVS.Extinction.CSharp.Editor.csproj", "{02DCDCEA-78DF-6017-10CB-2A014B619EC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00FCB4C3-8B92-E17A-36F1-0EFBECA534D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00FCB4C3-8B92-E17A-36F1-0EFBECA534D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00FCB4C3-8B92-E17A-36F1-0EFBECA534D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00FCB4C3-8B92-E17A-36F1-0EFBECA534D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02DCDCEA-78DF-6017-10CB-2A014B619EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02DCDCEA-78DF-6017-10CB-2A014B619EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02DCDCEA-78DF-6017-10CB-2A014B619EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02DCDCEA-78DF-6017-10CB-2A014B619EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
